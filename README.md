@@ -76,18 +76,18 @@ tsunami-video-analysis/
 ```bash
 git clone https://github.com/GregoryMN/Sendai-Airport-Tsunami-Speeds-and-Inundation-Heights-Analysis.git
 cd tsunami-video-analysis
-
+```
 
 ### 2. Create and activate virtual environment
-
+```
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # Linux/macOS
 source venv/bin/activate
-
+```
 ### 3. Install dependencies
-
+```
 pip install --upgrade pip
 pip install -r requirements.txt
 
@@ -103,27 +103,27 @@ scikit-image>=0.23.0
 tensorflow>=2.15.0
 matplotlib>=3.9.0
 scipy>=1.13.0
-
+```
 ### 4. Download models
-
+```
 # YOLO11m segmentation (auto-downloads on first run, or manual)
 python -c "from ultralytics import YOLO; YOLO('yolo11m-seg.pt')"
 
 # Place these two files yourself:
 #   1. Your fine-tuned flood model → models/best.pt
 #   2. Orientation TFLite model → models/vehicle_orientation.tflite
-
+```
 ### 5. Place input video
-
+```
 mkdir -p input_videos
 # Download or copy: 2011 Japan Tsunami - Sendai Airport Terminal (Full Footage)_1080p.mp4
-
+```
 ### 6. Run
-
+```
 python speed_predict.py
 python height_predict.py
-
-Outputs (Automatically Generated)
+```
+## 📊 Outputs (Automatically Generated)
 For each script:
 
 runs/detect/exp_speed/output_video.mp4 (or exp_height)
