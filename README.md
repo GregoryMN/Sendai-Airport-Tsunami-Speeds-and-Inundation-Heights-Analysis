@@ -1,5 +1,6 @@
 # Sendai-Airport-Tsunami-Speeds-and-Inundation-Heights-Analysis
 Zip files and Python code associated with the analysis done on my Razer Blade 17 (2022). Laptop specifications include; Windows 11 Home, Intel(R) Core(TM) i7-12800H (2.40 GHz), 64GB RAM, and an NVIDIA GeForce RTX 3070 Ti Laptop GPU (8GB VRAM).
+
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)  
 [![CUDA](https://img.shields.io/badge/CUDA-11.8%2B-green.svg)](https://developer.nvidia.com/cuda-downloads)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -77,7 +78,7 @@ git clone https://github.com/GregoryMN/Sendai-Airport-Tsunami-Speeds-and-Inundat
 cd tsunami-video-analysis
 
 
-1. Create and activate virtual environment
+### 2. Create and activate virtual environment
 
 python -m venv venv
 # Windows
@@ -85,7 +86,7 @@ venv\Scripts\activate
 # Linux/macOS
 source venv/bin/activate
 
-2. Install dependencies
+### 3. Install dependencies
 
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -103,7 +104,7 @@ tensorflow>=2.15.0
 matplotlib>=3.9.0
 scipy>=1.13.0
 
-3. Download models
+### 4. Download models
 
 # YOLO11m segmentation (auto-downloads on first run, or manual)
 python -c "from ultralytics import YOLO; YOLO('yolo11m-seg.pt')"
@@ -112,12 +113,12 @@ python -c "from ultralytics import YOLO; YOLO('yolo11m-seg.pt')"
 #   1. Your fine-tuned flood model → models/best.pt
 #   2. Orientation TFLite model → models/vehicle_orientation.tflite
 
-4. Place input video
+### 5. Place input video
 
 mkdir -p input_videos
 # Download or copy: 2011 Japan Tsunami - Sendai Airport Terminal (Full Footage)_1080p.mp4
 
-5. Run
+### 6. Run
 
 python speed_predict.py
 python height_predict.py
