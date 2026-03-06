@@ -161,6 +161,8 @@ Video not found: Update hardcoded path in both scripts (or add argparse – see 
 No detections: Lower conf=0.3 in predict calls
 
 ## 📊 Outputs (Automatically Generated)
+<img width="1920" height="2180" alt="combined_screenshots" src="https://github.com/user-attachments/assets/d18d7807-fbde-4d79-9ab4-4658228b6786" />
+
 For each script:
 
 runs/detect/exp_speed/output_video.mp4 (or exp_height)
